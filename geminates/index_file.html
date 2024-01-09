@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Index File Explainer</title>
+	<style>
+	body {
+		font-family: 'Verdana';font-size: 1rem
+	}
+	</style>
+</head>
+
+<body>
+<p>The central  source of information for the geminates analysis is the ‘index.xlsx’ file, which you can view on this page under "Stop Analysis".&nbsp;</p>
+<p>You can also find it on the MQ Onedrive at&nbsp;<em> &lt;language&gt;\Obstruent  analysis\collated stops</em>.&nbsp;</p>
+<p>Each plosive has been coded for a number of  variables, generally relating to:</p>
+<ul>
+  <li>plosive  metadata;</li>
+  <li>phonological  and morphological correlates; and</li>
+  <li>articulatory  data.</li>
+</ul>
+	<p>You may wish to open this explainer in a new window to refer back to it: <a href="index_file.html" target="_blank" rel="noopener noreferrer">click here</a>.</p>
+
+<p>In more  detail, each row gives information about a single stop. The columns give the  following information:</p>
+<table border="1" cellspacing="0" cellpadding="1">
+  <tr>
+    <td valign="top"><p align="center">&nbsp;Factor</p></td>
+    <td valign="top"><p>Column heading</p></td>
+    <td valign="top"><p>Description</p></td>
+    <td valign="top"><p>Dependencies</p></td>
+  </tr>
+  <tr>
+    <td rowspan="5" valign="top"><p align="center">Metadata </p></td>
+    <td><p><strong>ID</strong><strong> </strong></p></td>
+    <td><p>A unique ID which links a row in the index file to an audio file    containing the plosive. </p></td>
+    <td><p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td><p><strong>Context</strong><strong> </strong></p></td>
+    <td><p>The utterance containing the stop. </p></td>
+    <td><p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td><p><strong>Translation</strong><strong> </strong></p></td>
+    <td><p>The translation of the utterance containing the stop. </p></td>
+    <td><p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td><p><strong>Source</strong><strong> </strong></p></td>
+    <td><p>The audio file containing the utterance. </p></td>
+    <td><p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td><p><strong>Timestamp</strong><strong> </strong></p></td>
+    <td><p>A timestamp of the utterance within the audio file. Mostly given in    automatic ELAN format of B=<strong>HH:MM:SS</strong>.MS. </p></td>
+    <td><p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td rowspan="7" valign="top"><p align="center">Morpho/phonological </p></td>
+    <td><p><strong>Stop</strong><strong> </strong></p></td>
+    <td><p>The IPA value of the stop. </p></td>
+    <td><p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td><p><strong>PoA</strong><strong> </strong></p></td>
+    <td><p>Place of articulation of the stop. </p></td>
+    <td><p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td><p><strong>StopType</strong><strong> </strong></p></td>
+    <td><p>The type of stop (coded as &lsquo;lenis&rsquo; or &lsquo;geminate&rsquo; for our purposes).    This is based on the present orthographical representation in the language    BEFORE phonetic analysis. </p></td>
+    <td><p>Automatically generated from &lsquo;Stop&rsquo;. </p></td>
+  </tr>
+  <tr>
+    <td><p><strong>Monomorphemic</strong><strong> </strong></p></td>
+    <td><p>Whether the stop is found within a monomorphemic word (Y) or not (N). </p></td>
+    <td><p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td><p><strong>Preceding morpheme</strong><strong> </strong></p></td>
+    <td><p>The gloss of the morpheme preceding the morpheme containing the stop. </p></td>
+    <td><p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td><p><strong>Following morpheme</strong><strong> </strong></p></td>
+    <td><p>The gloss of the morpheme following the morpheme containing the stop. </p></td>
+    <td><p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td><p><strong>Preceding morae</strong><strong> </strong></p></td>
+    <td><p>The number of morae preceding the stop in the word. </p></td>
+    <td><p>Semi-automated based on IPA. </p></td>
+  </tr>
+  <tr>
+    <td valign="top"><p align="center">Socio </p></td>
+    <td><p><strong>Speaker</strong><strong> </strong></p></td>
+    <td><p>The initials of the speaker pronouncing the stop. </p></td>
+    <td><p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td rowspan="5" valign="top"><p align="center">Acoustic </p></td>
+    <td><p><strong>excl</strong><strong> </strong></p></td>
+    <td><p>A binary value indicating whether the person inspecting the spectrogram    believes this token should be excluded from analysis. </p></td>
+    <td><p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td><p><strong>dsto</strong><strong> </strong></p></td>
+    <td><p>Duration of the stop. </p></td>
+    <td><p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td><p><strong>vsto</strong><strong> </strong></p></td>
+    <td><p>The average harmonic ratio for the stop. &gt;0.5 indicates high    probability of voicing. </p></td>
+    <td><p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td><p><strong>LF</strong><strong> </strong></p></td>
+    <td><p>Whether vsto may be impacted by (background) low frequency noises.    0 indicates no interfering noise; 1 indicates some interfering noise has been    detected. </p></td>
+    <td><p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td><p><strong>note</strong><strong> </strong></p></td>
+    <td><p>Any notes left by the person inspecting the spectrogram. </p></td>
+    <td><p>&nbsp;</p></td>
+  </tr>
+</table>
+<p>There are,  additionally, a number of columns which are exist for other purposes (e.g.  generation of other values, Matlab workflow, etc.).</p>
+<table border="1" cellspacing="0" cellpadding="1">
+  <tr>
+    <td valign="top"><br>
+      Column Heading </td>
+    <td valign="top"><p>Description</p></td>
+    <td valign="top"><p>Dependencies</p></td>
+  </tr>
+  <tr>
+    <td valign="top"><p>Word</p></td>
+    <td valign="top"><p>The full phonological word    containing the stop (in standard orthography).</p></td>
+    <td valign="top"><p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td valign="top"><p>dutt</p></td>
+    <td valign="top"><p>Duration of the utterance    containing the stop.</p></td>
+    <td valign="top"><p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td valign="top"><p>t1</p></td>
+    <td valign="top"><p>The timestamp (within the audio    clip) where the utterance begins.</p></td>
+    <td valign="top"><p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td valign="top"><p>t2</p></td>
+    <td valign="top"><p>The timestamp (within the audio    clip) where the plosive begins.</p></td>
+    <td valign="top"><p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td valign="top"><p>t3</p></td>
+    <td valign="top"><p>The timestamp (within the audio    clip) where the plosive ends. Note: aspiration is considered part of the stop    in this analysis. </p></td>
+    <td valign="top"><p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td valign="top"><p>t4</p></td>
+    <td valign="top"><p>The timestamp (within the audio    clip) where the utterance ends.</p></td>
+    <td valign="top"><p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td valign="top"><p>Lexeme</p></td>
+    <td valign="top"><p>The lexeme containing the stop.    Note: this column exists purely for the purposes of workflow in calling    groups of stops in the phonetic analysis – this column is not used for    analysis.</p></td>
+    <td valign="top"><p>Semi-automatically generated from    &lsquo;Word&rsquo;. Stops in bound morphemes are coded for morpheme gloss rather than    form to deal with vowel harmony.</p></td>
+  </tr>
+  <tr>
+    <td valign="top"><p>IPA</p></td>
+    <td valign="top"><p>The full phonological word    containing the stop (in IPA).</p></td>
+    <td valign="top"><p>Automatically generated from &lsquo;Word&rsquo;.</p></td>
+  </tr>
+  <tr>
+    <td valign="top"><p>IPA (no boundaries)</p></td>
+    <td valign="top"><p>The full phonological word    containing the stop (in IPA), omitting any morphological boundaries. </p></td>
+    <td valign="top"><p>Automatically generated from    &lsquo;Word&rsquo;.</p></td>
+  </tr>
+</table>
+<p>Fig 1: exemplar stop analysis – red lines  indicate boundaries used in this analysis.</p>
+<img width = "60%" src="images/exemplar.png">
+</body>
+</html>

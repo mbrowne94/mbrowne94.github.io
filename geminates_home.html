@@ -9,11 +9,12 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
     <title>Geminates Project Page</title>
 	<style>
+		
 		header {
-		  background-color: #cccccc;
+		  background-color: #002233;
 		  text-align: center;
-		  color: black;
-		  height: 5rem;
+		  color: white;
+		  height: 3.1rem;
 		  background-position: center;
 		  background-repeat: no-repeat;
 		  background-size: cover;
@@ -21,7 +22,8 @@
 		body, html {
     		font-family: 'Verdana';font-size: 1rem
 			padding-left:10em;
-			height:100%
+			height:100%;
+			background-color:white;	
 		;
 		}
 		#content
@@ -30,7 +32,7 @@
             }
 				/* Dropdown Button */
 			.dropbtn {
-			  background-color: #04AA6D;
+			  background-color: #1d1b22;
 			  color: white;
 			  padding: 16px;
 			  font-size: 16px;
@@ -48,7 +50,7 @@
 			  display: none;
 			  position: absolute;
 			  background-color: #f1f1f1;
-			  min-width: 160px;
+			  min-width: 200px;
 			  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 			  z-index: 1;
 			}
@@ -68,7 +70,7 @@
 			.dropdown:hover .dropdown-content {display: block;}
 
 			/* Change the background color of the dropdown button when the dropdown content is shown */
-			.dropdown:hover .dropbtn {background-color: #3e8e41;}	
+			.dropdown:hover .dropbtn {background-color: #585166;}	
 	</style>
 	
 </head>
@@ -133,12 +135,15 @@
 <body>
 <!-- Main -->
 <header>
-	<p>Geminates Project Page</p>
+	<h3>Geminates Project Page</h3>
 </header>
 
   <p></p>
 <div id="content">
 	<div class="dropdown"></div>
+	<div class="dropdown">
+  <button class="dropbtn" onclick="call_workflow()">Workflow Summary</button>
+</div>	
 <div class="dropdown">
   <button class="dropbtn">Warlmanpa</button>
   <div class="dropdown-content">
@@ -157,6 +162,9 @@
 </div>
 <div class="dropdown">
   <button class="dropbtn" onclick="call_help()">Help</button>
+  <div class="dropdown-content">
+    <a href="#" onclick="call_index()">Stop Analysis</a>
+  </div>
 </div>	
 <iframe id="main_content" width="100%" height="90%" src="geminates/home.html"></iframe>
 </div>
@@ -179,12 +187,17 @@ function WRM_word_freqs() {
   document.getElementById("main_content").src = "geminates/Warumungu_word_freqs.html";
 }
 function WRM_index() {
-  document.getElementById("main_content").src = "https://onedrive.live.com/embed?resid=4DD2755B1C56FA53%218179&authkey=!APnt16R-XHYwHWo&em=2";
+  document.getElementById("main_content").src = "https://onedrive.live.com/embed?resid=4DD2755B1C56FA53%218180&authkey=!AKRTk3hd6eceMZg&em=2";
 }
 function call_help() {
   document.getElementById("main_content").src = "geminates/help.html";
 }
-	
+function call_index() {
+  document.getElementById("main_content").src = "geminates/index_file.html";
+}	
+function call_workflow() {
+  document.getElementById("main_content").src = "geminates/workflow.html";
+}	
 	
 </script>
 
