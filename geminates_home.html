@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <title>Geminates Project Page</title>
+	<style>
+		header {
+		  background-color: #cccccc;
+		  text-align: center;
+		  color: black;
+		  height: 5rem;
+		  background-position: center;
+		  background-repeat: no-repeat;
+		  background-size: cover;
+				}
+		body, html {
+    		font-family: 'Verdana';font-size: 1rem
+			padding-left:10em;
+			height:100%
+		;
+		}
+		#content
+            {
+                position:absolute; left: 5.3rem; right: 0; bottom: 0; top: 5.5rem; 
+            }
+				/* Dropdown Button */
+			.dropbtn {
+			  background-color: #04AA6D;
+			  color: white;
+			  padding: 16px;
+			  font-size: 16px;
+			  border: none;
+			}
+
+			/* The container <div> - needed to position the dropdown content */
+			.dropdown {
+			  position: relative;
+			  display: inline-block;
+			}
+
+			/* Dropdown Content (Hidden by Default) */
+			.dropdown-content {
+			  display: none;
+			  position: absolute;
+			  background-color: #f1f1f1;
+			  min-width: 160px;
+			  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			  z-index: 1;
+			}
+
+			/* Links inside the dropdown */
+			.dropdown-content a {
+			  color: black;
+			  padding: 12px 16px;
+			  text-decoration: none;
+			  display: block;
+			}
+
+			/* Change color of dropdown links on hover */
+			.dropdown-content a:hover {background-color: #ddd;}
+
+			/* Show the dropdown menu on hover */
+			.dropdown:hover .dropdown-content {display: block;}
+
+			/* Change the background color of the dropdown button when the dropdown content is shown */
+			.dropdown:hover .dropbtn {background-color: #3e8e41;}	
+	</style>
+	
+</head>
+
+<!-- Navbar -->
+<nav id="navbar">
+  <ul class="navbar-items flexbox-col">
+    <li class="navbar-item flexbox-left">
+      <a class="navbar-item-inner flexbox-left">
+        <div class="navbar-item-inner-icon-wrapper flexbox">
+          <ion-icon name="home-outline"></ion-icon>
+        </div>
+        <span class="link-text">Home</span>
+      </a>
+    </li>
+    <li class="navbar-item flexbox-left">
+      <a class="navbar-item-inner flexbox-left" href="projects.html">
+        <div class="navbar-item-inner-icon-wrapper flexbox">
+          <ion-icon name="folder-open-outline"></ion-icon>
+        </div>
+        <span class="link-text">Projects</span>
+      </a>
+    </li>
+    <li class="navbar-item flexbox-left">
+      <a class="navbar-item-inner flexbox-left">
+        <div class="navbar-item-inner-icon-wrapper flexbox">
+          <ion-icon name="reader-outline"></ion-icon>
+        </div>
+        <span class="link-text">CV</span>
+      </a>
+    </li>
+    <li class="navbar-item flexbox-left">
+      <a class="navbar-item-inner flexbox-left">
+        <div class="navbar-item-inner-icon-wrapper flexbox">
+          <ion-icon name="stats-chart-outline"></ion-icon>
+        </div>
+        <span class="link-text">Data Sets</span>
+      </a>
+    </li>
+  <li class="navbar-item flexbox-left">
+      <a class="navbar-item-inner flexbox-left" href="scholar.html">
+        <div class="navbar-item-inner-icon-wrapper flexbox">
+          <i class="ai ai-google-scholar ai-1x"></i>
+        </div>
+        <span class="link-text">Google Scholar</span>
+      </a>
+    </li>
+  <li class="navbar-item flexbox-left">
+      <a class="navbar-item-inner flexbox-left" href="orcid.html">
+        <div class="navbar-item-inner-icon-wrapper flexbox">
+          <i class="ai ai-orcid ai-1x"></i>
+        </div>
+        <span class="link-text">ORCiD</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<body>
+<!-- Main -->
+<header>
+	<p>Geminates Project Page</p>
+</header>
+
+  <p></p>
+<div id="content">
+	<div class="dropdown"></div>
+<div class="dropdown">
+  <button class="dropbtn">Warlmanpa</button>
+  <div class="dropdown-content">
+    <a href="#" onclick="WRL_stop_freqs()">Stop Frequencies</a>
+    <a href="#" onclick="WRL_word_freqs()">Word Frequencies</a>
+    <a href="#" onclick="WRL_index()">Stop Analysis</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button class="dropbtn">Warumungu</button>
+  <div class="dropdown-content">
+    <a href="#" onclick="WRM_stop_freqs()">Stop Frequencies</a>
+    <a href="#" onclick="WRM_word_freqs()">Word Frequencies</a>
+    <a href="#" onclick="WRM_index()">Stop Analysis</a>
+  </div>
+</div>
+<div class="dropdown">
+  <button class="dropbtn" onclick="call_help()">Help</button>
+</div>	
+<iframe id="main_content" width="100%" height="90%" src="geminates/home.html"></iframe>
+</div>
+
+
+<script>
+function WRL_stop_freqs() {
+  document.getElementById("main_content").src = "geminates/Warlmanpa_stop_freqs.html";
+}
+function WRL_word_freqs() {
+  document.getElementById("main_content").src = "geminates/Warlmanpa_word_freqs.html";
+}
+function WRL_index() {
+  document.getElementById("main_content").src = "https://onedrive.live.com/embed?resid=4DD2755B1C56FA53%218179&authkey=!APnt16R-XHYwHWo&em=2";
+}
+function WRM_stop_freqs() {
+  document.getElementById("main_content").src = "geminates/Warumungu_stop_freqs.html";
+}
+function WRM_word_freqs() {
+  document.getElementById("main_content").src = "geminates/Warumungu_word_freqs.html";
+}
+function WRM_index() {
+  document.getElementById("main_content").src = "https://onedrive.live.com/embed?resid=4DD2755B1C56FA53%218179&authkey=!APnt16R-XHYwHWo&em=2";
+}
+function call_help() {
+  document.getElementById("main_content").src = "geminates/help.html";
+}
+	
+	
+</script>
+
+
+</body>
+</html>
