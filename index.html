@@ -14,7 +14,7 @@
 		  background-color: #cccccc;
 		  text-align: center;
 		  color: white;
-		  height: 10rem;
+		  height: 8rem;
 		  background-position: center;
 		  background-repeat: no-repeat;
 		  background-size: cover;
@@ -23,7 +23,11 @@
     		font-family: 'Verdana';font-size: 1rem
 			padding-left:2em;
 		;
-}
+		}
+		#content
+            {
+                position:absolute; left: 5.3rem; right: 0; bottom: 0; top: 8rem; 
+            }
 	</style>
 	
 </head>
@@ -32,7 +36,7 @@
 <nav id="navbar">
   <ul class="navbar-items flexbox-col">
     <li class="navbar-item flexbox-left">
-      <a class="navbar-item-inner flexbox-left">
+      <a class="navbar-item-inner flexbox-left"  href="javascript:goHome();">
         <div class="navbar-item-inner-icon-wrapper flexbox">
           <ion-icon name="home-outline"></ion-icon>
         </div>
@@ -40,7 +44,7 @@
       </a>
     </li>
     <li class="navbar-item flexbox-left">
-      <a class="navbar-item-inner flexbox-left" href="projects.html">
+      <a class="navbar-item-inner flexbox-left" href="javascript:goProjects();">
         <div class="navbar-item-inner-icon-wrapper flexbox">
           <ion-icon name="folder-open-outline"></ion-icon>
         </div>
@@ -48,7 +52,7 @@
       </a>
     </li>
     <li class="navbar-item flexbox-left">
-      <a class="navbar-item-inner flexbox-left">
+      <a class="navbar-item-inner flexbox-left"  href="javascript:goCV();">
         <div class="navbar-item-inner-icon-wrapper flexbox">
           <ion-icon name="reader-outline"></ion-icon>
         </div>
@@ -56,7 +60,7 @@
       </a>
     </li>
     <li class="navbar-item flexbox-left">
-      <a class="navbar-item-inner flexbox-left">
+      <a class="navbar-item-inner flexbox-left"  href="javascript:goData();">
         <div class="navbar-item-inner-icon-wrapper flexbox">
           <ion-icon name="stats-chart-outline"></ion-icon>
         </div>
@@ -64,7 +68,7 @@
       </a>
     </li>
   <li class="navbar-item flexbox-left">
-      <a class="navbar-item-inner flexbox-left" href="scholar.html">
+      <a class="navbar-item-inner flexbox-left" href="https://scholar.google.com/citations?user=gEBQQiMAAAAJ&hl=en">
         <div class="navbar-item-inner-icon-wrapper flexbox">
           <i class="ai ai-google-scholar ai-1x"></i>
         </div>
@@ -72,7 +76,7 @@
       </a>
     </li>
   <li class="navbar-item flexbox-left">
-      <a class="navbar-item-inner flexbox-left" href="orcid.html">
+      <a class="navbar-item-inner flexbox-left" href="https://orcid.org/0000-0001-7623-8179">
         <div class="navbar-item-inner-icon-wrapper flexbox">
           <i class="ai ai-orcid ai-1x"></i>
         </div>
@@ -86,13 +90,26 @@
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 <body>
-<!-- Main -->
-<header>
-</header>
-<div class="flexbox-col">
- <div>
-  <p>I'm Mitch, a postdoctoral researcher specialising in the documentation &amp; description of Australian Indigenous Languages.</p>
- </div>
+	<header></header>
+ 	<div id="content">
+  	<iframe id="main_content" width="100%" height="90%" src="home.html" frameBorder="0"></iframe>
 	</div>
-</body>
+<script>
+function goHome() {
+  document.getElementById("main_content").src = "home.html";
+}
+function goProjects() {
+  document.getElementById("main_content").src = "projects.html";
+}
+function goCV() {
+  document.getElementById("main_content").src = "CV.html";
+}
+function goData() {
+  document.getElementById("main_content").src = "data.html";
+}
+
+	
+</script>
+	</body>
+	
 </html>
