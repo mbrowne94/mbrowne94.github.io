@@ -147,23 +147,24 @@
 <div class="dropdown">
   <button class="dropbtn">Warlmanpa</button>
   <div class="dropdown-content">
-    <a href="#" onclick="WRL_stop_freqs()">Stop Frequencies</a>
-    <a href="#" onclick="WRL_word_freqs()">Word Frequencies</a>
-    <a href="#" onclick="WRL_index()">Stop Analysis</a>
+    <a href="#" onclick="WRL_index()">Full data set</a>
+	<a href="#" onclick="WRL_stop_freqs()">Stop frequencies</a>
+    <a href="#" onclick="WRL_word_freqs()">Word frequencies</a>
+    <a href="#" onclick="WRL_analysis()">Acoustic Analysis</a>
   </div>
 </div>
 <div class="dropdown">
   <button class="dropbtn">Warumungu</button>
   <div class="dropdown-content">
-    <a href="#" onclick="WRM_stop_freqs()">Stop Frequencies</a>
-    <a href="#" onclick="WRM_word_freqs()">Word Frequencies</a>
-    <a href="#" onclick="WRM_index()">Stop Analysis</a>
+    <a href="#" onclick="WRM_index()">Full data set</a>
+	<a href="#" onclick="WRM_stop_freqs()">Stop frequencies</a>
+    <a href="#" onclick="WRM_word_freqs()">Word frequencies</a>    
   </div>
 </div>
 <div class="dropdown">
   <button class="dropbtn" onclick="call_help()">Help</button>
   <div class="dropdown-content">
-    <a href="#" onclick="call_index()">Stop Analysis</a>
+    <a href="#" onclick="call_index()">Reading the data set</a>
   </div>
 </div>	
 <iframe id="main_content" width="100%" height="90%" src="geminates/home.html"></iframe>
@@ -197,7 +198,11 @@ function call_index() {
 }	
 function call_workflow() {
   document.getElementById("main_content").src = "geminates/workflow.html";
-}	
+}
+	
+function WRL_analysis() {
+  document.getElementById("main_content").src = "https://mitchbrowne.shinyapps.io/acoustic_viz/";
+}		
 	
 </script>
 
