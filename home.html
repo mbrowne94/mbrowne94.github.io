@@ -1,11 +1,48 @@
 <!doctype html>
 <html>
 <head>
+	<style>
+	
+.some-page-wrapper {
+  margin: 15px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}		
+body {
+  font-family: 'Verdana';font-size: 1rem
+  padding-left:2em;
+}
+		a {
+			color:#585166
+		}
+		
+	</style>
 <meta charset="utf-8">
 <title>Untitled Document</title>
 </head>
 
 <body>
-I'm Mitch, a postdoctoral researcher specialising in the documentation &amp;amp; description of Australian Indigenous Languages.
-</body>
+<div class='some-page-wrapper'>
+  <div class='row'>
+    <div class='column' style="width: 5%">
+
+        <img src="images/Browne_photo.webp" alt=""/>
+
+    </div>
+    
+    <div class='column' style="flex: 1 0 0%; padding-left:2em;">
+      
+    <h1>About Me</h1><p>I'm Mitch, a linguist at <a href="https://researchers.mq.edu.au/en/persons/mitchell-browne">Macquarie University</a>. <br> I primarily work on the description and documentation of Australian languages, especially <a href="https://collection.aiatsis.gov.au/austlang/language/c17">Warlmanpa</a> and (more recently) <a href="https://collection.aiatsis.gov.au/austlang/language/c18">Warumungu</a>.</p> </div>
+  </div>
+</div></body>
 </html>
