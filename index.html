@@ -20,14 +20,34 @@
 		  background-size: cover;
 				}
 		body {
-    		font-family: 'Verdana';font-size: 1rem
-			padding-left:2em;
-		;
+		font-size: 1rem
+		padding-left:2em;
 		}
+		h1   {font-size: 2rem}
 		#content
             {
                 position:absolute; left: 5.3rem; right: 0; bottom: 0; top: 8rem; 
             }
+	.some-page-wrapper {
+		padding-left:5em;
+  margin: 15px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}		
+		a {
+			color:#585166
+		}
+		
 	</style>
 	
 </head>
@@ -36,7 +56,7 @@
 <nav id="navbar">
   <ul class="navbar-items flexbox-col">
     <li class="navbar-item flexbox-left">
-      <a class="navbar-item-inner flexbox-left"  href="javascript:goHome();">
+      <a class="navbar-item-inner flexbox-left"  href="#">
         <div class="navbar-item-inner-icon-wrapper flexbox">
           <ion-icon name="home-outline"></ion-icon>
         </div>
@@ -44,7 +64,7 @@
       </a>
     </li>
     <li class="navbar-item flexbox-left">
-      <a class="navbar-item-inner flexbox-left" href="javascript:goProjects();">
+      <a class="navbar-item-inner flexbox-left" href="projects.html">
         <div class="navbar-item-inner-icon-wrapper flexbox">
           <ion-icon name="folder-open-outline"></ion-icon>
         </div>
@@ -52,7 +72,7 @@
       </a>
     </li>
     <li class="navbar-item flexbox-left">
-      <a class="navbar-item-inner flexbox-left"  href="javascript:goCV();">
+      <a class="navbar-item-inner flexbox-left"  href="cv.html">
         <div class="navbar-item-inner-icon-wrapper flexbox">
           <ion-icon name="reader-outline"></ion-icon>
         </div>
@@ -60,7 +80,7 @@
       </a>
     </li>
     <li class="navbar-item flexbox-left">
-      <a class="navbar-item-inner flexbox-left"  href="javascript:goData();">
+      <a class="navbar-item-inner flexbox-left"  href="data.html">
         <div class="navbar-item-inner-icon-wrapper flexbox">
           <ion-icon name="stats-chart-outline"></ion-icon>
         </div>
@@ -91,25 +111,19 @@
 
 <body>
 	<header></header>
- 	<div id="content">
-  	<iframe id="main_content" width="100%" height="90%" src="home.html" frameBorder="0"></iframe>
-	</div>
-<script>
-function goHome() {
-  document.getElementById("main_content").src = "home.html";
-}
-function goProjects() {
-  document.getElementById("main_content").src = "projects.html";
-}
-function goCV() {
-  document.getElementById("main_content").src = "CV.html";
-}
-function goData() {
-  document.getElementById("main_content").src = "data.html";
-}
+ 	<div class='some-page-wrapper'>
+  <div class='row'>
+    <div class='column' style="width: 5%">
 
-	
-</script>
+        <img src="images/Browne_photo.webp" alt=""/>
+
+    </div>
+    
+    <div class='column' style="flex: 1 0 0%; padding-left:2em;">
+      
+    <h1>About Me</h1><p>I'm Mitch, a linguist at <a href="https://researchers.mq.edu.au/en/persons/mitchell-browne">Macquarie University</a>. <br> I primarily work on the description and documentation of Australian languages, especially <a href="https://collection.aiatsis.gov.au/austlang/language/c17">Warlmanpa</a> and (more recently) <a href="https://collection.aiatsis.gov.au/austlang/language/c18">Warumungu</a>.</p> </div>
+  </div>
+</div>
 	</body>
 	
 </html>
