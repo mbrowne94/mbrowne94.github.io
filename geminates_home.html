@@ -151,6 +151,7 @@
 	<a href="#" onclick="WRL_stop_freqs()">Stop frequencies</a>
     <a href="#" onclick="WRL_word_freqs()">Word frequencies</a>
     <a href="#" onclick="WRL_analysis()">Acoustic Analysis</a>
+    <a href="#" onclick="WRL_stats()">Statistical Analysis</a>
   </div>
 </div>
 <div class="dropdown">
@@ -160,6 +161,7 @@
 	<a href="#" onclick="WRM_stop_freqs()">Stop frequencies</a>
     <a href="#" onclick="WRM_word_freqs()">Word frequencies</a> 
     <a href="#" onclick="WRM_analysis()">Acoustic Analysis</a>
+    <a href="#" onclick="WRM_stats()">Statistical Analysis</a>
 	  
   </div>
 </div>
@@ -183,6 +185,11 @@ function WRL_word_freqs() {
 function WRL_index() {
   document.getElementById("main_content").src = "https://onedrive.live.com/embed?resid=4DD2755B1C56FA53%218179&authkey=!APnt16R-XHYwHWo&em=2";
 }
+	
+function WRL_stats() {
+  document.getElementById("main_content").src = "geminates/wrl_stats/wrl_stats.html";
+}
+	
 function WRM_stop_freqs() {
   document.getElementById("main_content").src = "geminates/Warumungu_stop_freqs.html";
 }
@@ -208,7 +215,11 @@ function WRL_analysis() {
 	
 function WRM_analysis() {
   document.getElementById("main_content").src = "https://mitchbrowne.shinyapps.io/wrm_viz/";
-}		
+}
+
+function WRM_stats() {
+  document.getElementById("main_content").src = "geminates/wrm_stats.html";
+}	
 	
 </script>
 
