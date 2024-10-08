@@ -1,0 +1,368 @@
+<!doctype html>
+<html>
+<head>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script>
+			let myLabels = document.querySelectorAll('.lbl-toggle');
+
+		Array.from(myLabels).forEach(label => {
+		  label.addEventListener('keydown', e => {
+			// 32 === spacebar
+			// 13 === enter
+			if (e.which === 32 || e.which === 13) {
+			  e.preventDefault();
+			  label.click();
+			};
+		  });
+		});
+	</script>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <title>Mitch Browne - Publications</title>
+	<style>
+		.wrap-collabsible {
+		  margin-bottom: 1.2rem 0;
+		}
+
+		input[type='checkbox'] {
+		  display: none;
+		}
+
+		.lbl-toggle {
+		  display: block;
+
+		  /*font-weight: bold;
+		  font-family: monospace;
+		  font-size: 1.2rem;
+		  text-transform: uppercase;
+		  text-align: center;*/
+
+		  padding: 1rem;
+
+		  color: #BFBFBF; /* text colour default */
+		  background: #1D1B22;/* background colour default */
+
+		  cursor: pointer;
+
+		  border-radius: 7px;
+		  transition: all 0.25s ease-out;
+		}
+
+		.lbl-toggle:hover {
+		  color: #FFF; /* text colour hover */
+		}
+
+		.lbl-toggle::before {
+		  content: ' ';
+		  display: inline-block;
+
+		  border-top: 5px solid transparent;
+		  border-bottom: 5px solid transparent;
+		  border-left: 5px solid currentColor;
+		  vertical-align: middle;
+		  margin-right: .7rem;
+		  transform: translateY(-2px);
+
+		  transition: transform .2s ease-out;
+		}
+
+		.toggle:checked + .lbl-toggle::before {
+		  transform: rotate(90deg) translateX(-3px);
+		}
+
+		.collapsible-content {
+		  max-height: 0px;
+		  overflow: hidden;
+		  transition: max-height .25s ease-in-out;
+		}
+
+		.toggle:checked + .lbl-toggle + .collapsible-content {
+		  max-height: 100vh;
+		}
+
+		.toggle:checked + .lbl-toggle {
+		  border-bottom-right-radius: 0;
+		  border-bottom-left-radius: 0;
+		}
+
+		.collapsible-content .content-inner {
+		  background: #E2DFE6; /* background colour of embedded text */
+		  border-bottom: #E6E6E6;
+		  border-bottom-left-radius: 7px;
+		  border-bottom-right-radius: 7px;
+		  padding: .5rem 1rem;
+		}
+			body {
+		font-size: 1rem
+		}
+		.container {
+		padding-left:5em;
+  		margin: 15px;
+		}
+
+		tr:hover {
+			/*background-color: #CFC1F0;*/
+		}
+		input[type=text] {
+		  background-color: white;
+		  background-image: url('images/search.svg');
+		  background-position:left center;
+		  background-size: 10%;
+		  background-repeat: no-repeat;
+		  padding-left: 40px;
+		}
+		#myTable tr td:nth-child(2), #myTable th:nth-child(2) {
+    	display: none;
+		}	
+	</style>
+<meta charset="utf-8">
+<title>cv</title>
+
+</head>
+
+<!-- Navbar -->
+<nav id="navbar">
+  <ul class="navbar-items flexbox-col">
+    <li class="navbar-item flexbox-left">
+      <a class="navbar-item-inner flexbox-left"  href="index.html">
+        <div class="navbar-item-inner-icon-wrapper flexbox">
+          <ion-icon name="home-outline"></ion-icon>
+        </div>
+        <span class="link-text">Home</span>
+      </a>
+    </li>
+    <li class="navbar-item flexbox-left">
+      <a class="navbar-item-inner flexbox-left" href="projects.html">
+        <div class="navbar-item-inner-icon-wrapper flexbox">
+          <ion-icon name="folder-open-outline"></ion-icon>
+        </div>
+        <span class="link-text">Projects</span>
+      </a>
+    </li>
+    <li class="navbar-item flexbox-left">
+      <a class="navbar-item-inner flexbox-left"  href="cv.html">
+        <div class="navbar-item-inner-icon-wrapper flexbox">
+          <ion-icon name="reader-outline"></ion-icon>
+        </div>
+        <span class="link-text">CV</span>
+      </a>
+    </li>
+    <li class="navbar-item flexbox-left">
+      <a class="navbar-item-inner flexbox-left"  href="publications.html">
+        <div class="navbar-item-inner-icon-wrapper flexbox">
+          <ion-icon name="book-outline"></ion-icon>
+        </div>
+        <span class="link-text">Publications</span>
+      </a>
+    </li>
+  <li class="navbar-item flexbox-left">
+      <a class="navbar-item-inner flexbox-left" href="https://scholar.google.com/citations?user=gEBQQiMAAAAJ&hl=en">
+        <div class="navbar-item-inner-icon-wrapper flexbox">
+          <i class="ai ai-google-scholar ai-1x"></i>
+        </div>
+        <span class="link-text">Google Scholar</span>
+      </a>
+    </li>
+  <li class="navbar-item flexbox-left">
+      <a class="navbar-item-inner flexbox-left" href="https://orcid.org/0000-0001-7623-8179">
+        <div class="navbar-item-inner-icon-wrapper flexbox">
+          <i class="ai ai-orcid ai-1x"></i>
+        </div>
+        <span class="link-text">ORCiD</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<body>
+
+<div class="container">
+
+  <h1>Publications</h1>
+  <input class="form-control" id="myInput" type="text">
+  <br>
+  <table class="table" style="border-spacing:0.5em">
+    <tbody id="myTable">
+      		<tr>
+				<td>	<div class="wrap-collabsible">
+		  <input id="collapsible" class="toggle" type="checkbox" data-target="#e1">
+		  <label for="collapsible" class="lbl-toggle" >A grammar of Warlmanpa</label>
+		  <div id="e1" class="collapsible-content">
+			<div class="content-inner">
+			  <p>
+				<strong>Browne, M.</strong> (2024). A grammar of Warlmanpa. ANU Press. <a href="https://doi.org/10.22459/GW.2024">https://doi.org/10.22459/GW.2024</a>
+			  </p><br>
+				<p>
+				As spoken by Bunny Naburula, Danny Cooper, Dick Foster, Donald Graham, Doris Kelly, Elizabeth Johnson, George Brown, Gladys Brown, Jack Walker, Jessie Cooper, Jimmy Newcastle, Julie Kelly, Lofty Japaljarri, Louie Martin, May Foster, Norah Graham, Penny Kelly, Penny Williams, Selina Grant, Susannah Nelson, Topsy Walker, Toprail Japaljarri and William Graham.
+				</p><br>
+				<p>This volume is a descriptive analysis of Warlmanpa, a highly endangered language traditionally spoken northwest of the town of Tennant Creek, where most of the remaining speakers now live.</p><br>
+				<p>This grammatical description is based on language work carried out by community members and linguists since 1952, and is the first published reference grammar of the language.</p><br>
+				<p>The major areas of analysis include phonetics, phonology, morphology, and syntax. This volume also provides description of typologically notable features, including: a two-way stop contrast at each place of articulation; a complex second-position auxiliary system containing participant and tense/mood/aspect information; associated motion; and a lack of evidence for noun phrases.</p><br>
+				<p>This volume lays the foundation for future Warlmanpa language work.</p>
+			</div>
+		  </div>
+		</div></td>
+			<td>Book Monograph WRL</td>
+		</tr>
+		<tr>
+        <td>
+			<div class="wrap-collabsible">
+			<input id="collapsible2" class="toggle" type="checkbox" data-target="#e2">
+		  	<label for="collapsible2" class="lbl-toggle">“Strength, pride, hope, care”: Employment Pathways for First Nations Peoples and Communities of Djilang (Geelong) Action Research Final Report</label>
+		  	<div  id="e2" class="collapsible-content">
+			<div class="content-inner">
+			<strong>Browne, M.</strong>, Creed, A., Ingold, J., Presbitero, A., Gregersen, C.G., Rose, M., &amp; Whettam, L. (2023). “Strength, pride, hope, care”: Employment Pathways for First Nations Peoples and Communities of Djilang (Geelong) Action Research Final Report. <em>Department of Jobs, Skills, Industry and Regions. Victoria: Victoria State Government.</em> ISBN: 0730001792.
+			</div>
+		  </div>
+		</div>
+		</td>
+        <td>Report GEEL</td>
+
+      </tr>
+	<tr>
+        <td>
+			<div class="wrap-collabsible">
+			<input id="collapsible3" class="toggle" type="checkbox" data-target="#e3">
+		  	<label for="collapsible3" class="lbl-toggle">Cross-referencing of non-subject arguments in Pama-Nyungan languages</label>
+		  	<div  id="e3" class="collapsible-content">
+			<div class="content-inner">
+			<p>Ennever, T., &amp; <strong>Browne, M.</strong> (2023). Cross-referencing of non-subject arguments in Pama-Nyungan languages. <em>Australian Journal of Linguistics</em>, 43(1). <a href ="https://doi.org/10.1080/07268602.2023.2217412">https://doi.org/10.1080/07268602.2023.2217412</a></p>
+				<br>
+				<p>About one third of the Pama-Nyungan languages of Australia employ pronominal cross-referencing, yet systematic typological patterns of non-subject argument registration remain unexamined. We analyze this variation from two perspectives by surveying 22 Pama-Nyungan languages. Firstly, we survey which kinds of case-marked arguments can be cross-referenced by these pronominal systems. From this perspective, we find that a number of nominal expressions marked with so-called ‘local’ cases (e.g. locative, allative, ablative, etc.) can be cross-referenced when instantiating certain argument relations. Secondly, we find striking cross-linguistic predictability in how such relations, which we descriptively group as ‘locational’, are morphologically integrated into the pronominal paradigms. We show that the variation can be captured by two major parameters: firstly, whether locational cross-referencing utilizes the same form as another non-subject series, or whether locational cross-referencing is serviced by a unique series formally built off another non-subject series. In this latter case there is further variation as to which other non-subject series provides the base for the dedicated locational series. These parameters result in six surface pattern types, and we show that each of the patterns is instantiated in languages of the survey.</p>
+			</div>
+		  </div>
+		</div>
+			</td>
+        <td>Journal Article Typ</td>
+
+      </tr>
+      <tr>
+        <td>
+			<div class="wrap-collabsible">
+			<input id="collapsible4" class="toggle" type="checkbox" data-target="#e4">
+		  	<label for="collapsible4" class="lbl-toggle">Ngumpin-Yapa languages</label>
+		  	<div  id="e4" class="collapsible-content">
+			<div class="content-inner">
+			Meakins, F., Ennever, T., Osgarby, D., <strong>Browne, M.</strong>, &amp; Hamilton-Hollaway, A. (2023). Ngumpin-Yapa languages. In C. Bowern (Ed.), The <em>Oxford Guide to Australian Languages</em> (pp. 918-932). Oxford: Oxford University Press.  
+			</div>
+		  </div>
+		</div>	
+			</td>
+        <td>Book Chapter Typ</td>
+
+      </tr>
+      <tr>
+        <td>
+		<div class="wrap-collabsible">
+			<input id="collapsible5" class="toggle" type="checkbox" data-target="#e5">
+		  	<label for="collapsible5" class="lbl-toggle">A Grammatical Description of Warlmanpa, a Ngumpin-Yapa Language Spoken around Tennant Creek (Northern Territory)</label>
+		  	<div  id="e5" class="collapsible-content">
+			<div class="content-inner">
+			<p><strong>Browne, M.</strong> (2021). A Grammatical Description of Warlmanpa, a Ngumpin-Yapa Language Spoken around Tennant Creek (Northern Territory). <em>PhD Thesis</em>, University of Queensland. <a href="https://doi.org/10.14264/d0fcbc2">https://doi.org/10.14264/d0fcbc2</a>.</p><br>
+				<p>This was my PhD thesis, which has been superceded by <a href="https://doi.org/10.22459/GW.2024">the published monograph</a>.</p>
+			</div>
+		  </div>
+		</div>	
+			</td>
+        <td>PhD Thesis WRL</td>
+
+      </tr>
+      <tr>
+        <td>		
+			<div class="wrap-collabsible">
+			<input id="collapsible6" class="toggle" type="checkbox" data-target="#e6">
+		  	<label for="collapsible6" class="lbl-toggle">On the integration of dative adjuncts into event structures in Yapa languages</label>
+		  	<div  id="e6" class="collapsible-content">
+			<div class="content-inner">
+			<p><strong>Browne, M.</strong> (2021). On the integration of dative adjuncts into event structures in Yapa languages. <em>Languages</em>, 6(1). <a href="https://doi.org/10.3390/languages6030136">https://doi.org/10.3390/languages6030136</a>.</p><br>
+				<p>Warlpiri and Warlmanpa (Ngumpin-Yapa languages of Australia) exhibit a complex predicate construction in which a class of preverbs introduces a single argument that is not shared by the argument structure of the inflecting verb, nor is there necessarily any shared event structure. This is problematic for many theories of linking structures of complex predicates, since no arguments or events are shared between the predicative elements of the complex predicate. The same grammatical relation is instantiated by a beneficiary adjunct. </p><br><p>In light of new research in event and argument structure, I propose a lexical rule which introduces an applicative argument to account for the beneficiary construction; and that the preverbs take another predicate as one of their arguments to account for the complex predicates. The applicative rule and the preverbs both introduce an argument of the same grammatical relation, leading to interesting interactions, given that two grammatical relations of the same type are not expected to co-occur within a single clause.</p> 
+			</div>
+		  </div>
+		</div>	
+			 </td>
+        <td>Journal Article WRL</td>
+
+      </tr>
+	<tr>
+        <td>			
+		<div class="wrap-collabsible">
+			<input id="collapsible7" class="toggle" type="checkbox" data-target="#e7">
+		  	<label for="collapsible7" class="lbl-toggle">Leveraging pre-trained representations to improve access to untranscribed speech from endangered languages</label>
+		  	<div  id="e7" class="collapsible-content">
+			<div class="content-inner">
+			<p>San, N., Bartelds, M., <strong>Browne, M.</strong>, Clifford, L., Gibson, F., Mansfield, J., Nash, D., Simpson, J., Turpin, M., Vollmer, M., Wilmoth, S., &amp; Jurafsky, D. (2021). Leveraging pre-trained representations to improve access to untranscribed speech from endangered languages. In 2021 <em>IEEE Automatic Speech Recognition and Understanding Workshop (ASRU)</em> (pp. 1094-1101). IEEE. <a href = "https://doi.org/10.1109/ASRU51503.2021.9688301">https://doi.org/10.1109/ASRU51503.2021.9688301</a>. </p><br><p>Pre-trained speech representations like wav2vec 2.0 are a powerful tool for automatic speech recognition (ASR). Yet many endangered languages lack sufficient data for pre-training such models, or are predominantly oral vernaculars without a standardised writing system, precluding fine-tuning. Query-by-example spoken term detection (QbE-STD) offers an alternative for iteratively indexing untranscribed speech corpora by locating spoken query terms. Using data from 7 Australian Aboriginal languages and a regional variety of Dutch, all of which are endangered or vulnerable, we show that QbE-STD can be improved by leveraging representations developed for ASR (wav2vec 2.0: the English monolingual model and XLSR53 multilingual model). Surprisingly, the English model outperformed the multilingual model on 4 Australian language datasets, raising questions around how to optimally leverage self-supervised speech representations for QbE-STD. </p><br><p>Nevertheless, we find that wav2vec 2.0 representations (either English or XLSR53) offer large improvements (56-86% relative) over state-of-the-art approaches on our endangered language datasets.</p>  
+			</div>
+		  </div>
+		</div>	
+		</td>
+        <td>Journal Article</td>
+
+      </tr>	
+	<tr>
+        <td>
+			<div class="wrap-collabsible">
+			<input id="collapsible8" class="toggle" type="checkbox" data-target="#e8">
+		  	<label for="collapsible8" class="lbl-toggle">Contrast and retroactive implicatures: an analysis of =<em>lku</em> ‘now, then’ in Warlpiri and Warlmanpa</label>
+		  	<div  id="e8" class="collapsible-content">
+			<div class="content-inner">
+			<p><strong>Browne, M.</strong> (2020). Contrast and retroactive implicatures: an analysis of =<em>lku</em> ‘now, then’ in Warlpiri and Warlmanpa. <em>Australian Journal of Linguistics</em>, 40(2). <a href="https://doi.org/10.1080/07268602.2020.1753651">https://doi.org/10.1080/07268602.2020.1753651</a>.</p> 
+				<br>
+				<p>The clitic <em>=lku</em> in Warlpiri and Warlmanpa (Ngumpin-Yapa, Pama-Nyungan, Australia) has been previously analyzed as a ‘change of state’ marker indicating some proposition is false at an earlier time, and true at a later time. In this paper, I examine a number of uses of =<em>lku</em>, which require expanding and refining the ‘change of state’ analysis, in order to argue for a new analysis of <em>=lku</em> as a temporal and discourse clitic. The temporal function locates the event or state being modified by <em>=lku</em> in the temporal consequence of another event or state. This function interacts with lexical aspect, triggering an inference of the cessation of an ongoing state or event, if there is one, and encoding the inception of the state or event being modified by <em>=lku</em>. The discourse use of <em>=lku</em> frames new information which should be evaluated against the ongoing discourse. I also demonstrate some striking cross-linguistic similarities, showing that temporal morphemes commonly interact with discourse structure, just as =<em>lku</em> does in Warlpiri and Warlmanpa.</p>
+			</div>
+		  </div>
+		</div>	
+			 </td>
+        <td>Journal Article WRL</td>
+
+      </tr>	
+	<tr>
+        	<td>
+			<div class="wrap-collabsible">
+			<input id="collapsible9" class="toggle" type="checkbox" data-target="#e9">
+		  	<label for="collapsible9" class="lbl-toggle">Warlmanpa corpus</label>
+		  	<div  id="e9" class="collapsible-content">
+			<div class="content-inner">
+			<strong>Browne, M.</strong> (collector), 2016. Warlmanpa corpus. Collection WRL1 at catalog.paradisec.org.au [Open Access]. <a href="https://dx.doi.org/10.26278/FW4K-F911">https://dx.doi.org/10.26278/FW4K-F911</a>.    
+			</div>
+		  </div>
+		</div>	
+	  </td>
+        <td>Corpus WRL</td>
+
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+
+<script>
+$(document).ready(function(){
+	
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+	
+});
+</script>
+</body>
+	<script defer>
+	var hashParams = window.location.hash.substr(1).split('&'); // substr(1) to remove the `#`
+		for(var i = 0; i < hashParams.length; i++){
+    var p = hashParams[i].split('=');
+    document.getElementById(p[0]).value = decodeURIComponent(p[1]);;
+	 var value = $("#myInput").val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });		
+}
+	</script>	
+</html>
