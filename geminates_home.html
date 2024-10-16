@@ -150,7 +150,6 @@
     <a href="#" onclick="WRL_index()">Full data set</a>
 	<a href="#" onclick="WRL_stop_freqs()">Stop frequencies</a>
     <a href="#" onclick="WRL_word_freqs()">Word frequencies</a>
-    <a href="#" onclick="WRL_analysis()">Acoustic Analysis</a>
     <a href="#" onclick="WRL_stats()">Statistical Analysis</a>
   </div>
 </div>
@@ -160,11 +159,18 @@
     <a href="#" onclick="WRM_index()">Full data set</a>
 	<a href="#" onclick="WRM_stop_freqs()">Stop frequencies</a>
     <a href="#" onclick="WRM_word_freqs()">Word frequencies</a> 
-    <a href="#" onclick="WRM_analysis()">Acoustic Analysis</a>
     <a href="#" onclick="WRM_stats()">Statistical Analysis</a>
 	  
   </div>
 </div>
+<div class="dropdown">
+  <button class="dropbtn">Kamu</button>
+  <div class="dropdown-content">
+    <a href="#" onclick="XMU_index()">Full data set</a>
+    <a href="#" onclick="XMU_stats()">Statistical Analysis</a>
+	  
+  </div>
+</div>	
 <div class="dropdown">
   <button class="dropbtn" onclick="call_help()">Help</button>
   <div class="dropdown-content">
@@ -183,7 +189,7 @@ function WRL_word_freqs() {
   document.getElementById("main_content").src = "geminates/Warlmanpa_word_freqs.html";
 }
 function WRL_index() {
-  document.getElementById("main_content").src = "https://onedrive.live.com/embed?resid=4DD2755B1C56FA53%218179&authkey=!APnt16R-XHYwHWo&em=2";
+  document.getElementById("main_content").src = "https://mqoutlook-my.sharepoint.com/personal/michael_proctor_mq_edu_au/_layouts/15/Doc.aspx?sourcedoc={d1cca90e-a191-478b-a9a2-7df5ef7c6eb6}&action=embedview&wdAllowInteractivity=False&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True";
 }
 	
 function WRL_stats() {
@@ -197,7 +203,7 @@ function WRM_word_freqs() {
   document.getElementById("main_content").src = "geminates/Warumungu_word_freqs.html";
 }
 function WRM_index() {
-  document.getElementById("main_content").src = "https://mqoutlook-my.sharepoint.com/personal/mitchell_browne_mq_edu_au/_layouts/15/Doc.aspx?sourcedoc={a84a5614-da4c-4d3d-a19c-1f7b66263c2e}&action=embedview&wdAllowInteractivity=False&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True";
+  document.getElementById("main_content").src = "https://mqoutlook-my.sharepoint.com/personal/mitchell_browne_mq_edu_au/_layouts/15/Doc.aspx?sourcedoc={338e450e-976a-4a53-a5b2-6d8d4b1f290a}&action=embedview&wdAllowInteractivity=False&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True";
 }
 function call_help() {
   document.getElementById("main_content").src = "geminates/help.html";
@@ -218,7 +224,15 @@ function WRM_analysis() {
 }
 
 function WRM_stats() {
-  document.getElementById("main_content").src = "geminates/wrm_stats.html";
+  document.getElementById("main_content").src = "geminates/wrm_stats/wrm_stats.html";
+}	
+
+function XMU_stats() {
+  document.getElementById("main_content").src = "geminates/xmu_stats/xmu_stats.html";
+}		
+
+function XMU_index() {
+  document.getElementById("main_content").src = "https://mqoutlook-my.sharepoint.com/personal/michael_proctor_mq_edu_au/_layouts/15/Doc.aspx?sourcedoc={72b17761-988c-4e6c-92e6-7e8c8a57dda8}&action=embedview&wdAllowInteractivity=False&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True";
 }	
 	
 </script>
