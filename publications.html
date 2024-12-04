@@ -116,7 +116,18 @@
 		}
 		#myTable tr td:nth-child(2), #myTable th:nth-child(2) {
     	display: none;
-		}	
+		}
+		.row {
+		  display: flex;
+		  flex-direction: row;
+		  flex-wrap: wrap;
+		  width: 100%;
+		}
+
+		.column {
+		  display: flex;
+		  flex-direction: column;
+		}
 	</style>
 <meta charset="utf-8">
 <title>cv</title>
@@ -190,25 +201,55 @@
   <table class="table" style="border-spacing:0.5em">
     <tbody id="myTable">
       		<tr>
-				<td>	<div class="wrap-collabsible">
-		  <input id="collapsible" class="toggle" type="checkbox" data-target="#e1">
-		  <label for="collapsible" class="lbl-toggle" >A grammar of Warlmanpa</label>
-		  <div id="e1" class="collapsible-content">
-			<div class="content-inner">
+				<td>	
+					<div class="wrap-collabsible">
+		 			 <input id="collapsible" class="toggle" type="checkbox" data-target="#e1">
+		 			 <label for="collapsible" class="lbl-toggle" >A grammar of Warlmanpa</label>
+		  			<div id="e1" class="collapsible-content">
+					<div class="content-inner">
 			  <p>
 				<strong>Browne, M.</strong> (2024). A grammar of Warlmanpa. ANU Press. <a href="https://doi.org/10.22459/GW.2024">https://doi.org/10.22459/GW.2024</a>
 			  </p><br>
-				<p>
-				As spoken by Bunny Naburula, Danny Cooper, Dick Foster, Donald Graham, Doris Kelly, Elizabeth Johnson, George Brown, Gladys Brown, Jack Walker, Jessie Cooper, Jimmy Newcastle, Julie Kelly, Lofty Japaljarri, Louie Martin, May Foster, Norah Graham, Penny Kelly, Penny Williams, Selina Grant, Susannah Nelson, Topsy Walker, Toprail Japaljarri and William Graham.
+				  <div class="row">
+    <div class="column" style="width: 10%">
+
+        <img src="images/wrl_book.jpg" width="100%" alt=""/>
+
+    </div>
+    
+    <div class="column" style="flex: 0 0 90%; padding-left:2em;">
+      
+    				<p>
+				<b>As spoken by Bunny Naburula, Danny Cooper, Dick Foster, Donald Graham, Doris Kelly, Elizabeth Johnson, George Brown, Gladys Brown, Jack Walker, Jessie Cooper, Jimmy Newcastle, Julie Kelly, Lofty Japaljarri, Louie Martin, May Foster, Norah Graham, Penny Kelly, Penny Williams, Selina Grant, Susannah Nelson, Topsy Walker, Toprail Japaljarri and William Graham.</b>
 				</p><br>
 				<p>This volume is a descriptive analysis of Warlmanpa, a highly endangered language traditionally spoken northwest of the town of Tennant Creek, where most of the remaining speakers now live.</p><br>
 				<p>This grammatical description is based on language work carried out by community members and linguists since 1952, and is the first published reference grammar of the language.</p><br>
 				<p>The major areas of analysis include phonetics, phonology, morphology, and syntax. This volume also provides description of typologically notable features, including: a two-way stop contrast at each place of articulation; a complex second-position auxiliary system containing participant and tense/mood/aspect information; associated motion; and a lack of evidence for noun phrases.</p><br>
-				<p>This volume lays the foundation for future Warlmanpa language work.</p>
+				<p>This volume lays the foundation for future Warlmanpa language work.</p></div>
+  			</div>
+				
+
 			</div>
 		  </div>
 		</div></td>
 			<td>Book Monograph WRL</td>
+		</tr>
+		<tr>
+				<td>	<div class="wrap-collabsible">
+		  <input id="collapsible10" class="toggle" type="checkbox" data-target="#e10">
+		  <label for="collapsible10" class="lbl-toggle" >Stop Oppositions in Warumungu: A Distributional and Acoustic Analysis</label>
+		  <div id="e10" class="collapsible-content">
+			<div class="content-inner">
+			  <p>
+				<strong>Browne, M.</strong>, Proctor, M., Simpson, J., Harvey, M., Mailhammer, R., &amp; Carpenter, H. (2024). Stop Oppositions in Warumungu: A Distributional and Acoustic Analysis.  In <em>Proceedings of the Nineteenth Australasian International Conference on Speech Science and Technology</em>, edited by Olga Maxwell and Rikke Bundgaard-Nielsen, 117–21. Melbourne: University of Melbourne, 2024 <a href="https://assta.org/wp-content/uploads/2024/11/Proceedings-of-the-of-19th-Australasian-International-Conference-on-Speech-Science-and-Technology-1.pdf">https://assta.org/wp-content/uploads/2024/11/Proceedings-of-the-of-19th-Australasian-International-Conference-on-Speech-Science-and-Technology-1.pdf</a>
+			  </p><br>
+				<p>
+				Warumungu is a language of Central Australia with a reported contrast for stops. There has been no formal distributional or acoustic analysis of this contrast; this study addresses this gap. Analysis of 439 stops produced by three speakers reveals that the consistent phonetic correlates of the manner contrast are duration and voicing. The primary distinction in stop manner is duration; voicing distinctions are predictable from duration.
+				</p>
+			</div>
+		  </div>
+		</div></td>
+			<td>Proceeding BBL</td>
 		</tr>
 		<tr>
         <td>
