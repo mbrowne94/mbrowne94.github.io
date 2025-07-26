@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.menu {
+  float: left;
+  width: 20%;
+  text-align: center;
+}
+
+.menu a {
+  background-color: #B88167;
+  padding: 8px;
+  margin-top: 7px;
+  display: block;
+  width: 100%;
+  color: white;
+}
+
+.main {
+  float: left;
+  width: 80%;
+  padding: 0 20px;
+}
+
+
+h1 {
+  color: white;
+}
+
+
+@media only screen and (max-width: 620px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body style="font-family:Verdana;">
+
+<div style="background-color:#8B1C27;padding:15px;text-align:center;">
+  <h1>Warlmanpa Spelling</h1>
+</div>
+
+<div style="overflow:auto">
+  <div class="menu">
+    <a href="listen.html">Listen along</a>
+    <a href="hard_sounds.html">Hard sounds</a>
+    <a href="#">Try spelling</a>
+    <a href="#">Link 4</a>
+  </div>
+
+  <div class="main">
+	  <p>Here is Bunny Napurrula saying some Warlmanpa words. Match the words to their spelling.</p>
+
+	<div id="main">
+<form id="form1">
+
+<h3>Sound 1: </h3>
+	<audio controls>
+  		<source src="sounds/lurrija.wav" type="audio/wav">
+	Your browser does not support the audio element.
+	</audio>
+<label for="var_string"><input type="radio" name="lurrija" value="1" id="var_string" /> Lurrija </label>
+<label for="var_join"><input type="radio" name="lurrija" value="0" id="var_join" /> Puta </label>
+<label for="var_info"><input type="radio" name="lurrija" value="0" id="var_info" /> Ngappa </label>
+<label for="var_condition"><input type="radio" name="lurrija" value="0" id="var_condition"/> Partta </label>
+
+<h3>Sound 2: </h3>
+	<audio controls>
+  		<source src="sounds/partta.wav" type="audio/wav">
+	Your browser does not support the audio element.
+	</audio>
+<label for="sub_string"><input type="radio" name="Partta" value="0" id="sub_string"/> Lurrija </label>
+<label for="sub_join"><input type="radio" name="Partta" value="0" id="sub_join"/> Puta </label>
+<label for="sub_info"><input type="radio" name="Partta" value="0" id="sub_info" /> Ngappa </label>
+<label for="sub_condition"><input type="radio" name="Partta" value="1" id="sub_condition" /> Partta </label>
+
+<h3>Sound 3: </h3>
+	<audio controls>
+  		<source src="sounds/ngappa.wav" type="audio/wav">
+	Your browser does not support the audio element.
+	</audio>
+<label for="cat_string"><input type="radio" name="Ngappa" value="0" id="cat_string" /> Lurrija </label>
+<label for="cat_join"><input type="radio" name="Ngappa" value="0" id="cat_join" /> Puta </label>
+<label for="cat_info"><input type="radio" name="Ngappa" value="1" id="cat_info" /> Ngappa </label>
+<label for="cat_condition"><input type="radio" name="Ngappa" value="0" id="cat_condition" /> Partta </label>
+
+<h3>Sound 4: </h3>
+	<audio controls>
+  		<source src="sounds/puta.wav" type="audio/wav">
+	Your browser does not support the audio element.
+	</audio>
+<label for="if_string"><input type="radio" name="Puta" value="0" id="if_string" /> Lurrija </label>
+<label for="if_join"><input type="radio" name="Puta" value="1" id="if_join" /> Puta </label>
+<label for="if_info"><input type="radio" name="Puta" value="0" id="if_info" /> Ngappa </label>
+<label for="if_condition"><input type="radio" name="Puta"  value="0" id="if_condition" /> Partta </label>
+
+<button type="submit" value="Submit">Submit</button>
+
+</form>
+
+<p>Your grade is: <span id="grade">__</span></p>
+<p id="grade2"></p>
+
+
+
+<script>
+document.getElementById("form1").onsubmit=function() {
+       lurrija = parseInt(document.querySelector('input[name = "lurrija"]:checked').value);
+	   Partta = parseInt(document.querySelector('input[name = "Partta"]:checked').value);
+	   Ngappa = parseInt(document.querySelector('input[name = "Ngappa"]:checked').value);
+	   Puta = parseInt(document.querySelector('input[name = "Puta"]:checked').value);
+
+
+	   result = lurrija + Partta + Ngappa + Puta;
+
+	document.getElementById("grade").innerHTML = result;
+
+ grading = [
+	   {score:0,feedback:"Have another listen."},
+	   {score:1,feedback:"One right, but try again to get the others as well!"},
+	   {score:2,feedback:"You got half of them, try again!"},
+	   {score:3,feedback:"You got three right!"},
+	   {score:4,feedback:"You got them all correct, well done!"},
+	   ];
+
+for(i=0; i<grading.length; i++) {
+    if(result == grading[i].score) {
+    result2 = grading[i].feedback;
+	  }
+	  }
+
+
+document.getElementById("grade2").innerHTML = result2;
+
+return false; // required to not refresh the page; just leave this here
+} //this ends the submit function
+
+</script>
+
+
+</div>	  
+  </div>
+</div>
+
+</body>
+</html>
+
