@@ -27,24 +27,26 @@ tw-sidebar {
 tw-icon {
 	text-align: right;
 	padding-right: 0.75em;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Start" tags="" position="100,100" size="100,100">(set: $article3 to 0, $article4 to 0, $article5 to 0, $article6 to 0, $cipher1 to 0, $cipher2 to 0, $counter to 10, $warnings to 0)\
-(live: 1s)[(goto: &quot;Article1&quot;)]</tw-passagedata><tw-passagedata pid="2" name="Sidebar" tags="footer" position="225,100" size="100,100">(append: ?SideBar)[\
-(unless:$warnings is 3)[
-[[Make a Search-&gt;Search]]
-[[Malcom X Assassinated-&gt;Article1]]
-[[New Evidence-&gt;Article2]]
-(if: $article3 is 1)[[[Makai Lancaster-&gt;Article3]]]\
-(if: $article4 is 1)[[[Mysterious Message-&gt;Article4]]]\
-(if: $article5 is 1)[[[Ciphers-&gt;Ciphers]]]\
-(if: $article6 is 1)[[[CIA Ramblings-&gt;CIA]]]\
-(if: $article7 is 1)[[[Delta Green-&gt;Article5]]]\
-(set: $counter to it -1)
-(if:$counter is 0)[
-(set: $counter to 10)
-(set: $currentpassage to (passage:)&#39;s name)
-(live: 1s)[(goto: &quot;STOP&quot;)]
-]
-]
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Start" tags="" position="100,100" size="100,100">(set: $article3 to 0, $article4 to 0, $article5 to 0, $article6 to 0, $cipher1 to 0, $cipher2 to 0, $counter to 12, $warnings to 0)\
+(live: 1s)[(goto: &quot;Article1&quot;)]
+
+</tw-passagedata><tw-passagedata pid="2" name="Sidebar" tags="footer" position="225,100" size="100,100">(append: ?SideBar)[\
+  (unless:$warnings is 3)[
+    [[Make a Search-&gt;Search]]
+    [[Malcom X Assassinated-&gt;Article1]]
+    [[New Evidence-&gt;Article2]]
+    (if: $article3 is 1)[[[Makai Lancaster-&gt;Article3]]]\
+    (if: $article4 is 1)[[[Mysterious Message-&gt;Article4]]]\
+    (if: $article5 is 1)[[[Ciphers-&gt;Ciphers]]]\
+    (if: $article6 is 1)[[[CIA Ramblings-&gt;CIA]]]\
+    (if: $article7 is 1)[[[Delta Green-&gt;Article5]]]\
+    (set: $counter to it -1)
+    (if:$counter is 0)[
+      (set: $counter to 12)
+      (set: $currentpassage to (passage:)&#39;s name)
+      (live: 1s)[(goto: &quot;STOP&quot;)]
+    ]
+  ]
 ]</tw-passagedata><tw-passagedata pid="3" name="Article2" tags="" position="350,100" size="100,100">&#39;&#39;New Evidence That U.S. Government Killed Malcolm X&#39;&#39;
 Originally published: July 20, 2023
 Last updated: Thursday 3 August, 2023
@@ -52,7 +54,8 @@ Last updated: Thursday 3 August, 2023
 On July 25, a news conference will be held that will include a formally publicly unknown eye witness, Makai Lancaster, to the assassination. Lancaster says he will provide new information about the police role in the assassination.
 
 UPDATE:
-Lancaster did not present at the news conference. A source tells us he could not face his years of fabrications, and wished to formally state for the record that he agrees with the original findings. </tw-passagedata><tw-passagedata pid="4" name="Article1" tags="" position="100,225" size="100,100">&#39;&#39;Malcom X Assassinated&#39;&#39;
+Lancaster did not present at the news conference. A source tells us he could not face his years of fabrications, and wished to formally state for the record that he agrees with the original findings. </tw-passagedata><tw-passagedata pid="4" name="Article1" tags="" position="100,225" size="100,100">
+&#39;&#39;Malcom X Assassinated&#39;&#39;
 Sun 21 Feb 1965
 
 Malcolm X, the Negro nationalist leader, was assassinated while addressing a meeting in Harlem today. He fell after a barrage of shots. Later, two Negro men were arrested and charged with murder.
@@ -73,11 +76,11 @@ Guards had been stationed throughout the ballroom for Malcolm X&#39;s speech, wh
 
 Few policemen were on duty at the ballroom. But large numbers were soon on the scene. &quot;Don&#39;t let them get away&quot; Negroes shouted as they chased two men. &quot;Kill them, kill them.&quot; The policemen intervened as the two men were being beaten on the pavement.
 
-When he was in Britain he told students of Manchester University that the American Negro would bring about a revolution: &quot;the key to our success lies in //unity//.&quot;
+When he was in Britain he told students of Manchester University that the American Negro would bring about a revolution: &quot;the key to our success lies in (text-style:&quot;fidget&quot;)[unity].&quot;
 
 Reuter and British United Press</tw-passagedata><tw-passagedata pid="5" name="Article3" tags="" position="250,225" size="100,100">(set: $cipher1 to 1)Welcome to my homepage! 
 
-I am a law enthusiast living in the Austin TX, in the outer (text-style:&quot;expand&quot;,&quot;fidget&quot;)[ring]. You may be here because conspiracies interest you greatly, or need advice. Well I no longer involve myself in conpiracies due to old age and my own safety. Nowadays I want to search the world for enjoyable activities outdoors where I admire my grey ring.
+I am a law enthusiast living in the Austin TX, in the outer (text-style:&quot;expand&quot;,&quot;fidget&quot;)[ring]. You may be here because you are interested in conspiracies, or need advice. Well I no longer involve myself in conpiracies due to old age and my own safety. Nowadays I want to search the world for enjoyable activities outdoors where I admire my grey ring.
 
 More that you should know about me:
 
@@ -87,11 +90,11 @@ More that you should know about me:
 
 Thanks for visiting!</tw-passagedata><tw-passagedata pid="6" name="Search" tags="" position="375,225" size="100,100">Search SleuthWeb.
 (input: bind $search)
-(link-goto: &quot;Search&quot;, &quot;SearchResults&quot;)</tw-passagedata><tw-passagedata pid="7" name="SearchResults" tags="" position="500,225" size="100,100">(if: $search contains &quot;Lancaster&quot; or $search contains &quot;Makai&quot; or $search contains &quot;makai&quot; or $search contains &quot;lancaster&quot;)[
-	(set: $article3 to 1) (link-goto: &quot;Lancaster Home Page&quot;, &quot;Article3&quot;)
+(link-goto: &quot;Search&quot;, &quot;SearchResults&quot;)</tw-passagedata><tw-passagedata pid="7" name="SearchResults" tags="" position="500,225" size="100,100">Here are your search results:(if: $search contains &quot;Lancaster&quot; or $search contains &quot;Makai&quot; or $search contains &quot;makai&quot; or $search contains &quot;lancaster&quot;)[
+	(set: $article3 to 1) (link-goto: &quot;Makai Lancaster Personal Home Page&quot;, &quot;Article3&quot;)
 ](else-if: $search contains &quot;grey&quot; or $search contains &quot;Grey&quot;)[
     (set: $article4 to 1)(link-goto: &quot;Garbled message&quot;, &quot;Article4&quot;)
-](else-if: $search contains &quot;cipher&quot; or $search contains &quot;Cipher&quot;)[
+](else-if: $search contains &quot;cipher&quot; or $search contains &quot;Cipher&quot; or $search contains &quot;code&quot;)[
     (set: $article5 to 1)(link-goto: &quot;Ciphers&quot;, &quot;Ciphers&quot;)
 ](else-if: $search contains &quot;CIA&quot; or $search contains &quot;cia&quot; or $search contains &quot;onspirac&quot;)[
     (set: $article6 to 1)(link-goto: &quot;A weird blog post about the CIA&quot;, &quot;CIA&quot;)
@@ -99,21 +102,27 @@ Thanks for visiting!</tw-passagedata><tw-passagedata pid="6" name="Search" tags=
     (set: $article7 to 1)(link-goto: &quot;What is Delta Green?&quot;, &quot;Article5&quot;)
 ](else: )[
     (link-goto: &quot;No results! Try something else.&quot;, &quot;Search&quot;)
-]</tw-passagedata><tw-passagedata pid="8" name="Article4" tags="" position="825,350" size="100,100">(set:$cipher2 to 1)zuwf iug el vnrq ajkl opnr gjf vu ewwngpw tg ebm ugkq lv vaef fqae uvovhllt usx hpj ywhxk gzla gew jqsvfn hue qvw iusuik lgbt tnel taa suf nvvl rxbthdrl lvq rnll crewhfe</tw-passagedata><tw-passagedata pid="9" name="Ciphers" tags="" position="950,350" size="100,100">Here are some popular ciphers:
+]</tw-passagedata><tw-passagedata pid="8" name="Article4" tags="" position="575,400" size="100,100">(set:$cipher2 to 1)zuwf iug el vnrq ajkl opnr gjf vu ewwngpw tg ebm ugkq lv vaef fqae uvovhllt usx hpj ywhxk gzla gew jqsvfn hue qvw iusuik lgbt tnel taa suf nvvl rxbthdrl lvq rnll crewhfe</tw-passagedata><tw-passagedata pid="9" name="Ciphers" tags="" position="625,250" size="100,100">Here are some popular ciphers:
 
 Atbash cipher: the alphabet is reversed, so Z becomes A and so on.. 
 
-(if:$cipher1 is 1)[Sebald code, popularised by Lemony Snickett&#39;s A Series of Unfortunate Events..]
+(if:$cipher1 is 1)[Sebald code, popularised by Lemony Snickett&#39;s A Series of Unfortunate Events. After the word &#39;ring&#39;, the first word and then every eleventh word is the coded message, until the next mention of &#39;ring&#39;, upon which the code ends.]
 
 Caesar cipher: a letter is shifted left or right by a number of positions in the alphabet.
 
-(if:$cipher2 is 1)[Vignere cipher, a more complex form of the Caesar cipher, which requires an encryption key, usually in the form of a word, which signals how many numbers to shift each letter.]</tw-passagedata><tw-passagedata pid="10" name="CIA" tags="" position="175,375" size="100,100">The CIA has been TAKEN OVER by gruesome beings referred to THE GREYS. THEY&#39;RE RESPONSIBLE FOR ALL OF THE ASSASSINATIONS, ENSURING THE DOWNFALL OF AMERICA. THE TRUTH IS OUT THERE. WAKE UP SHEEPLE.</tw-passagedata><tw-passagedata pid="11" name="STOP" tags="" position="300,375" size="100,100">(if:$warnings is 0)[(text-style:&quot;blur&quot;,&quot;shudder&quot;)[(text-size:6)[STOP THIS]]]\
-(if:$warnings is 1)[(text-style:&quot;blur&quot;,&quot;shudder&quot;)[(text-size:6)[LAST WARNING]]]\
-(if:$warnings is 2)[(text-style:&quot;blur&quot;,&quot;shudder&quot;)[(text-size:6)[GOODBYE]]]\
+(if:$cipher2 is 1)[Vignere cipher, a more complex form of the Caesar cipher, which requires an encryption key, usually in the form of a word, which signals how many numbers to shift each letter. There are plenty of decoders on the wide web.]</tw-passagedata><tw-passagedata pid="10" name="CIA" tags="" position="175,375" size="100,100">The CIA has been TAKEN OVER by gruesome beings referred to THE GREYS. THEY&#39;RE RESPONSIBLE FOR ALL OF THE ASSASSINATIONS, ENSURING THE DOWNFALL OF AMERICA. THE TRUTH IS OUT THERE. WAKE UP SHEEPLE.</tw-passagedata><tw-passagedata pid="11" name="STOP" tags="" position="300,375" size="100,100">(if:$warnings is 0)[(text-style:&quot;blur&quot;,&quot;shudder&quot;)[(text-size:1)[&gt;Commencing host subroutine. (live:0.5s)[Success.](live:1.5s)[Ping:26ms.]]]]\
+(if:$warnings is 1)[(set:$progress to 0)
+{(live: 0.01s)[
+    (print: &#39;&lt;progress value=&quot;&#39; + (text: $progress) + &#39;&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;&#39;)	     (set:$progress to it+1)
+]}
+Triangulating location
+(live:1.5s)[Upload confirmed!]]\
+(if:$warnings is 2)[(text-style:&quot;blur&quot;,&quot;shudder&quot;)[(text-size:5)[Please remain calm and still.]]]\
 (set:$warnings to it +1)
+
 (unless:$warnings is 3)[
-(live: 1s)[(goto: $currentpassage)]
-]</tw-passagedata><tw-passagedata pid="12" name="Article5" tags="" position="825,475" size="100,100">A historical branch of the US Government, part of the Office of Naval Intelligence. Dissolved shortly after the Vietnam War. 
+(live: 2s)[(goto: $currentpassage)]
+]</tw-passagedata><tw-passagedata pid="12" name="Article5" tags="" position="450,400" size="100,100">Delta Green is a historical branch of the US Government, as part of the Office of Naval Intelligence. Dissolved shortly after the Vietnam War. 
 
 Conspiracy theorists claim that it was never officially shut down, though the US Government has repeatedly denied this.</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
