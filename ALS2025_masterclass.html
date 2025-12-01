@@ -154,17 +154,14 @@
 </div>  
 <div class="dropdown"><button class="dropbtn" onclick="call_history()">History</button></div>
 <div class="dropdown"><button class="dropbtn" onclick="call_matches()">Matches</button></div>
-<div class="dropdown"><button class="dropbtn" onclick="call_mismatches()">Mismatches</button></div>
 
 <div class="dropdown">
-  <button class="dropbtn">Morphosyntax</button>
+  <button class="dropbtn" onclick="call_WRL()">Morphosyntax</button>
   <div class="dropdown-content">
-    <a href="#" onclick="call_WRM()">Warlpiri and Warumungu notes</a>
 	<a href="#" onclick="call_WRL()">Warlmanpa notes</a>
     <a href="#" onclick="call_table()">Comparative table</a>
   </div>
 </div>
-<div class="dropdown"><button class="dropbtn" onclick="call_workflow()">Complex predicates and serial verbs</button></div>
 <div class="dropdown"><button class="dropbtn"><a href="https://mbrowne94.github.io/ALS2025/masterclass/Masterclass_Material.zip">Download all materials</a></button></div>
 
 <iframe id="main_content" width="100%" height="90%" src="ALS2025/masterclass/Introduction.html"></iframe>
@@ -188,6 +185,10 @@ function call_WRL() {
 
 function call_matches() {
   document.getElementById("main_content").src = "ALS2025/masterclass/Mangarrayi_notes_printed.html";
+}
+
+function call_history() {
+  document.getElementById("main_content").src = "ALS2025/masterclass/History_Presentation.html";
 }
 
 </script>
