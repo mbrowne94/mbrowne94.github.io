@@ -10,23 +10,70 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 <style>
-.scroll-spy[scroller]
-{
-	display:grid;gap:var(--size-1);
-	grid-template-areas:"side main";
-	grid-template-columns:var(--size-content-1) 1fr;
-	overflow:hidden;block-size:60svh;
-	inline-size:100cqi;
-	max-inline-size:80ch;
-	container-type:size;
-	border:1px solid var(--surface-3);
-	@container (inline-size <= 50ch){gap:0px;grid-template-areas:"side" "main";grid-template-columns:1fr;grid-template-rows:auto 1fr}}.carousel[scroller]{grid-area:main;scroll-snap-type:none;scroll-marker-group:before;display:grid;row-gap:10svh;padding:var(--size-3);scrollbar-width:thin;&::scroll-marker-group{grid-area:side;display:grid;align-content:start;justify-items:start;gap:var(--size-2);padding:var(--size-3);@container (inline-size <= 50ch){grid-auto-flow:column;max-width:100cqi;block-size:1.5lh;overflow-x:auto;margin-block-start:0;scrollbar-width:none;scroll-padding:1rem}}>section{place-items:start;place-content:start;display:grid;gap:1rem;@container (inline-size <= 50ch){padding:var(--size-3)}&::scroll-marker{--_bg: none;content:attr(aria-label);padding-inline:1.75ch;padding-block:1ch;color:var(--text-2);cursor:pointer;-webkit-tap-highlight-color:transparent;text-decoration:none;background:var(--_bg);border:1px solid #0000;border-radius:var(--radius-3);@container (inline-size <= 50ch){white-space:nowrap}@media (forced-colors: active){border-width:0px}}&::scroll-marker:is(:hover,:focus-visible,:target-current){--_bg: light-dark(white, var(--surface-2));color:var(--text-1);box-shadow:var(--shadow-2);border-color:var(--surface-2);@media (forced-colors: active){border-width:1px}}&::scroll-marker:hover{--_bg: light-dark(white, hsl(from var(--surface-2) h s l / .5))}&::scroll-marker:active{border-color:var(--link)}&::scroll-marker:hover:target-current{border-color:var(--surface-3)}}}section[scroller]{place-items:center}
-body {font-family: "Lato", sans-serif}
 
+* {
+  box-sizing: border-box;
+}
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 50%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 800px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
 </style>
-
-<link rel="stylesheet" href="./css/slider.css">
 </head>
 <body>
 
@@ -56,60 +103,52 @@ body {font-family: "Lato", sans-serif}
 <!-- Page content -->
 <div class="w3-content" style="max-width:2000px;margin-top:23px">
   <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+<div class="row">
+  <div class="column">
+    <div class="card">
+  <img src="images/wum.jpg" alt="Denim Jeans" style="width:100%">
+  <h3 class="w3-wide">The birth of new Australian Aboriginal Languages</h3>
+  <p class="price">2025-2029</p>
+  <p>The incursion of English has deeply impacted the linguistic landscape of Australia. In its wake: new languages which are complex amalgamations of English and traditional Australian languages. The number of first-language speakers is growing rapidly, yet speaking these languages is stigmatised and is correlated with poor educational outcomes. Moreover, many questions surround how these languages are formed and sustained. This project will develop a model of how sound systems develop in these languages, with particular attention paid to the role of speaker identity.</p>
+  <p><button onclick="location.replace('publications.html#myInput=WUM');">See publications</button></p>
+</div>
+  </div>
+  <div class="column">
+    <div class="card">
+  <img src="images/waveform.png" alt="Denim Jeans" style="width:100%">
+  <h3 class="w3-wide">The building blocks of language: Words in Central Australian languages</h3>
+  <p class="price">2022-2026</p>
+  <p>This research will provide social and cultural benefits by working with speakers of Anmatyerr, Kaytetye, and Warumungu -- three endangered languages of Central Australia -- to provide new knowledge about their structures. For Indigenous students, learning their heritage language is important for well-being and achievements. Descriptions of most indigenous languages do not adequately explain the richness and complexity of structure, knowledge of which are well understood by older speakers, but might not survive as the languages are spoken less by younger members of the community. The research team will work with speakers of Anmatyerr, Kaytetye, and Warumungu to provide good quality descriptions of complex structures, relating them to Indigenous learning practices. Good quality descriptions of complex structures in these languages will serve as models for improving descriptions in other Australian languages. The increase in knowledge of Australian languages and cultures with key implications for Indigenous wellbeing and health ares a National Priority area within the Indigenous Advancement Strategy.</p>
+  <p><button onclick="location.replace('publications.html#myInput=BBL');">See publications</button></p>
+</div>
+  </div>
+  <div class="column">
+    <div class="card">
+  <img src="images/employment.png" alt="Denim Jeans" style="width:100%">
+  <h3 class="w3-wide">Building employment pathways for Aboriginal people living in the Geelong region</h3>
+  <p class="price">2022-2023</p>
+  <p>This project involved action research to understand:</p>
+<p>• The experiences and stories of local First Nations peoples, communities and stakeholders within Djilang’s employment and skills ecosystem</p>
+<p>• The barriers, challenges, opportunities, what is working and what needs to change</p>
+<p> <i>Artwork by <a href="https://loganofficespace.com.au/ngiyambalgarra-consultancy/">Louisa Whettam</a></i></p>
+</div>
+  </div>
+  <div class="column">
+    <div class="card">
+  <img src="images/wrl.png" alt="Denim Jeans" style="width:100%">
+  <h3 class="w3-wide">Warlmanpa language documentation &amp; description</h3>
+  <p class="price">2017-2021</p>
+  <p>Warlmanpa is a highly endangered language spoken in the Northern Territory of Australia. In collaboration with speakers of the language, this project will provide long-lasting documentation of the language which can serve as the basis for revitalisation.
 
-<div class="scroll-spy" role="region" aria-label="Scroll spy carousel demo" scroller=""> <!-- marker group here --> 
-<div class="carousel carousel--vertical" aria-live="polite" scroller=""> 
-
-<section aria-label="New Australian Languages" scroller=""> <h3 scroller="" ><a href="publications.html#myInput=WUM">The birth of new Australian Aboriginal Languages: the role of speaker identity in language genesis</a></h3> 
-
-<p scroller="" class="w3-justify">
-The incursion of English has deeply impacted the linguistic landscape of Australia. In its wake: new languages which are complex amalgamations of English and traditional Australian languages. The number of first-language speakers is growing rapidly, yet speaking these languages is stigmatised and is correlated with poor educational outcomes. Moreover, many questions surround how these languages are formed and sustained. This project will develop a model of how sound systems develop in these languages, with particular attention paid to the role of speaker identity.
 </p>
-<p scroller="" class="w3-opacity">
-<i>2025-2029</i>
-</p>
-</section> 
+  <p><button onclick="location.replace('publications.html#myInput=WRL');">See publications</button></p>
+</div>
+  </div>
 
-<section aria-label="Building Blocks of Language" scroller=""> <h3 scroller=""><a href="publications.html#myInput=BBL">The building blocks of language: Words in Central Australian languages</a></h3> 
-
-<p scroller="" class="w3-justify">
-This project seeks to model the structure of words and phrases in three indigenous languages of of central
-Australia: Anmatyerr, Kaytetye, and Warumungu. The project will advance our understanding of the different ways
-that words and phrases function as the building blocks of language: how words vary in complexity, and the
-different ways that they combine to generate higher levels of linguistic structure. The project will preserve
-Indigenous language heritage and contribute to Indigenous cultural maintenance, a significant factor in advancing
-Indigenous well-being. The project will generate new insights into language structure that will advance linguistic
-theory, and inform language teaching and speech processing technologies.</p>
-<p scroller="" class="w3-opacity">
-<i>2022-2026</i>
-</p>
-</section> <section aria-label="Employment Pathways" scroller=""> 
-
-<h3 scroller=""><a href="publications.html#myInput=GEEL">Building employment pathways for Aboriginal people living in the Geelong region</a></h3> 
-<p scroller="" class="w3-justify">
-Action research to understand:<br>
-• The experiences and stories of local First Nations peoples, communities and stakeholders within Djilang’s employment and skills ecosystem<br>
-• The barriers, challenges, opportunities, what is working and what needs to change</p>
-<p scroller="" class="w3-opacity">
-<i>2022-2023</i>
-</p>
+</div>
 
 
- </section>
-
-<section aria-label="Warlmanpa language documentation &amp; description" scroller=""> 
-
-<h3 scroller=""><a href="publications.html#myInput=WRL">Warlmanpa language documentation &amp; description</a></h3> 
-<p scroller="" class="w3-justify">
-Warlmanpa is a highly endangered language spoken in the Northern Territory of Australia. In collaboration with speakers of the language, this project will provide long-lasting documentation of the language which can serve as the basis for revitalisation.</p>
-<p scroller="" class="w3-opacity">
-<i>2017-2021</i>
-</p>
-
-
- </section>
-
- </div> </div>	
+	
   </div>
 	
 </div>
