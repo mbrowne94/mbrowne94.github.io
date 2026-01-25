@@ -18,9 +18,13 @@
 		  });
 		});
 	</script>
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
 
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
     <title>Mitch Browne - Publications</title>
 	<style>
 		.wrap-collabsible {
@@ -30,6 +34,9 @@
 		input[type='checkbox'] {
 		  display: none;
 		}
+
+		body {font-family: "Lato", sans-serif}
+
 
 		.lbl-toggle {
 		  display: block;
@@ -95,9 +102,7 @@
 		  border-bottom-right-radius: 7px;
 		  padding: .5rem 1rem;
 		}
-			body {
-		font-size: 1rem
-		}
+
 		.container {
 		padding-left:5em;
   		margin: 15px;
@@ -135,72 +140,62 @@
 </head>
 
 <!-- Navbar -->
-<nav id="navbar">
-  <ul class="navbar-items flexbox-col">
-    <li class="navbar-item flexbox-left">
-      <a class="navbar-item-inner flexbox-left"  href="index.html">
-        <div class="navbar-item-inner-icon-wrapper flexbox">
-          <ion-icon name="home-outline"></ion-icon>
-        </div>
-        <span class="link-text">Home</span>
-      </a>
-    </li>
-    <li class="navbar-item flexbox-left">
-      <a class="navbar-item-inner flexbox-left" href="projects.html">
-        <div class="navbar-item-inner-icon-wrapper flexbox">
-          <ion-icon name="folder-open-outline"></ion-icon>
-        </div>
-        <span class="link-text">Projects</span>
-      </a>
-    </li>
-    <li class="navbar-item flexbox-left">
-      <a class="navbar-item-inner flexbox-left"  href="cv.html">
-        <div class="navbar-item-inner-icon-wrapper flexbox">
-          <ion-icon name="reader-outline"></ion-icon>
-        </div>
-        <span class="link-text">CV</span>
-      </a>
-    </li>
-    <li class="navbar-item flexbox-left">
-      <a class="navbar-item-inner flexbox-left"  href="publications.html">
-        <div class="navbar-item-inner-icon-wrapper flexbox">
-          <ion-icon name="book-outline"></ion-icon>
-        </div>
-        <span class="link-text">Publications</span>
-      </a>
-    </li>
-  <li class="navbar-item flexbox-left">
-      <a class="navbar-item-inner flexbox-left" href="https://scholar.google.com/citations?user=gEBQQiMAAAAJ&hl=en">
-        <div class="navbar-item-inner-icon-wrapper flexbox">
-          <i class="ai ai-google-scholar ai-1x"></i>
-        </div>
-        <span class="link-text">Google Scholar</span>
-      </a>
-    </li>
-  <li class="navbar-item flexbox-left">
-      <a class="navbar-item-inner flexbox-left" href="https://orcid.org/0000-0001-7623-8179">
-        <div class="navbar-item-inner-icon-wrapper flexbox">
-          <i class="ai ai-orcid ai-1x"></i>
-        </div>
-        <span class="link-text">ORCiD</span>
-      </a>
-    </li>
-  </ul>
-</nav>
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">Home</a>
+    <a href="cv.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CV</a>
+    <a href="projects.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Projects</a>
+    <a href="publications.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Publications</a>
+    <a href="https://scholar.google.com/citations?user=gEBQQiMAAAAJ&hl=en" class="w3-bar-item w3-button w3-padding-large w3-hide-small">
+	<i class="ai ai-google-scholar ai-1x"></i> Google Scholar</a>
+    <a href="https://orcid.org/0000-0001-7623-8179" class="w3-bar-item w3-button w3-padding-large w3-hide-small"><i class="ai ai-orcid ai-1x"></i> ORCiD</a>
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="cv.html" class="w3-bar-item w3-button w3-padding-large" >CV</a>
+  <a href="projects.html" class="w3-bar-item w3-button w3-padding-large" >Projects</a>
+  <a href="publications.html" class="w3-bar-item w3-button w3-padding-large" >Publications</a>
+  <a href="https://scholar.google.com/citations?user=gEBQQiMAAAAJ&hl=en" class="w3-bar-item w3-button w3-padding-large">Google Scholar</a>
+  <a href="https://orcid.org/0000-0001-7623-8179" class="w3-bar-item w3-button w3-padding-large"">ORCiD</a>
+</div>
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 <body>
 
-<div class="container">
+<div class="w3-content" style="max-width:2000px;margin-top:23">
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
 
-  <h1>Publications</h1>
+  <h1 class="w3-wide">Publications</h1>
   <input class="form-control" id="myInput" type="text">
   <br>
   <table class="table" style="border-spacing:0.5em">
     <tbody id="myTable">
-      		<tr>
+      	<tr>
+        <td>
+			<div class="wrap-collabsible">
+			<input id="collapsible11" class="toggle" type="checkbox" data-target="#e11">
+		  	<label for="collapsible11" class="lbl-toggle">Central Vowels in Kamu and Larrakia</label>
+		  	<div  id="e11" class="collapsible-content">
+			<div class="content-inner">
+			<p>
+			<strong>Browne, M.</strong>,  Harvey, M., Proctor, M &amp; Mailhammer, R. (2026). Central vowels in Kamu and Larrakia, <em>Australian Journal of Linguistics</em>, DOI:
+<a href="https://doi.org/10.1080/07268602.2025.2593913">10.1080/07268602.2025.2593913</a>.
+			</p>
+			<p>The vowel inventories of Kamu and Larrakia each consist of peripheral /i/-/u/-/e/-/a/-/o/ and another non-low vowel that has not been phonetically characterized. Descriptions of similar six-vowel systems in Western Top End languages offer inconsistent accounts of the non-peripheral vowel, but no instrumental analysis has yet been conducted. Acoustic and phonological analysis reveals that the sixth vowel is best characterized as /ʉ/ in Kamu and /ɨ/ in Larrakia. Height and backness are the critical phonetic properties that differentiate the non-peripheral vowel from the other vowel phonemes in each language. These results enhance our understanding of the structure and properties of higher cardinality vowel systems in Australian languages, and the typology of six-vowel systems more generally.
+			</p>
+			</div>
+		  </div>
+		</div>
+		</td>
+        <td>Report GEEL</td>
+
+      </tr>
+	  <tr>
 				<td>	
 					<div class="wrap-collabsible">
 		 			 <input id="collapsible" class="toggle" type="checkbox" data-target="#e1">
@@ -380,8 +375,8 @@
 
     </tbody>
   </table>
+	</div>
 </div>
-
 <script>
 $(document).ready(function(){
 	
